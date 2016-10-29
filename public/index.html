@@ -47,12 +47,16 @@
 
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
+  <script src="bower_components/underscore/underscore-min.js"></script>
+
+  <script src="range_extractor.js"></script>
+
   <script>
+    /* global $, compute */
     $('input#inputIntegers').on('input', function () {
-      $('input#inputRanges')[0].value = this.value
+      $('input#inputRanges')[0].value = compute(this.value);
     });
   </script>
-
 
 </body>
 
