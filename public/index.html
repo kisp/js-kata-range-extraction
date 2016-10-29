@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Range Extractor</title>
+
+
+  <!-- http://bootswatch.com/flatly/bootstrap.min.css -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+
+    <form class="form-horizontal">
+
+      <fieldset>
+        <legend>Range Extractor</legend>
+
+        <div class="form-group">
+          <label for="inputIntegers" class="col-lg-2 control-label">Integers</label>
+          <div class="col-lg-10">
+            <input class="form-control" id="inputIntegers" placeholder="2 4 1 10 12 88 11" type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputRanges" class="col-lg-2 control-label">Ranges</label>
+          <div class="col-lg-10">
+            <input class="form-control" id="inputRanges" type="text" readonly>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+
+
+  </div>
+
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    $('input#inputIntegers').on('input', function () {
+      $('input#inputRanges')[0].value = this.value
+    });
+  </script>
+
+
+</body>
+
+</html>
